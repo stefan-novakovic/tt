@@ -5,7 +5,7 @@ import Header from './Header';
 const Layout = () => {
    // minus Header height, minus Footer height
    return (
-      <div className="flex flex-col min-h-screen overflow-y-scroll">
+      <div className="flex flex-col min-h-screen">
          <Header />
          <Outlet />
          <Footer />
