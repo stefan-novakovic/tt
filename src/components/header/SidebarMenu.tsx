@@ -29,7 +29,7 @@ const SidebarMenu = ({
                   animate={{ x: 0 }}
                   exit={{ x: '100%' }}
                   transition={{ duration: 0.5 }}
-                  className="fixed top-0 right-0 z-50 h-screen w-60 bg-white flex flex-col md:hidden drop-shadow-xl"
+                  className="fixed top-0 right-0 z-50 h-screen w-60 bg-white flex flex-col md:hidden drop-shadow-xl sidebar-menu-overflow"
                >
                   {/* Close button */}
                   <div>

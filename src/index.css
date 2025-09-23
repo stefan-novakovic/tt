@@ -37,6 +37,12 @@ body {
    height: 0.65rem;
 }
 
+@media (pointer: coarse) {
+   .sidebar-menu-overflow {
+      overflow-y: scroll;
+   }
+}
+
 @media screen and (min-width: 768px) {
    .swiper {
       height: calc(100vh - 80px);
