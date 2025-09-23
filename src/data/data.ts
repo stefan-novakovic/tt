@@ -1,4 +1,10 @@
-export const swiperSlides: SwiperSlides[] = [
+export const swiperSlides: {
+   src: string;
+   lowRes: string;
+   heading: string;
+   subheading?: string;
+   buttonText?: string;
+}[] = [
    {
       src: '/asd.jpg',
       lowRes: '/asd-small.jpg',
@@ -27,4 +33,11 @@ export const swiperSlides: SwiperSlides[] = [
       subheading: 'Optimized UX with image placeholders.',
       buttonText: 'Explore'
    }
+];
+
+export const navLinks: { to: string; label: string }[] = [
+   { to: '/', label: 'Home' },
+   { to: '/coaches', label: 'Coaches' },
+   { to: '/clients', label: 'Clients' },
+   { to: '/drills', label: 'Drills' }
 ];
