@@ -1,1 +1,66 @@
 @import 'tailwindcss';
+@import 'swiper/css';
+@import 'swiper/css/effect-fade';
+@import 'swiper/css/pagination';
+
+@font-face {
+   font-family: 'Alexandria';
+   src: url('./assets/fonts/Alexandria-Regular.ttf') format('truetype');
+   font-weight: 400;
+   font-style: normal;
+}
+
+@theme {
+   --font-alexandria: 'Alexandria', sans-serif;
+}
+
+body {
+   font-family: 'Alexandria', sans-serif;
+}
+
+.swiper {
+   width: 100%;
+   height: calc(100vh - 64px);
+}
+
+.swiper-slide {
+   display: flex;
+}
+
+.swiper-pagination {
+   padding-bottom: 0.85rem;
+}
+
+.swiper-pagination span {
+   background-color: white;
+   width: 0.65rem;
+   height: 0.65rem;
+}
+
+@media screen and (min-width: 768px) {
+   .swiper {
+      height: calc(100vh - 80px);
+   }
+
+   .swiper-pagination span {
+      width: 0.75rem;
+      height: 0.75rem;
+   }
+}
+
+@media (min-width: 1024px) and (pointer: fine) {
+   html {
+      overflow-y: scroll;
+   }
+}
+
+@media (hover: hover) and (pointer: fine) {
+   a:hover,
+   a:focus-visible {
+      opacity: 0.7;
+   }
+
+   a:active {
+      opacity: 1;
+   }
+}
