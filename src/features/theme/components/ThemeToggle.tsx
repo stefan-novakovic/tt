@@ -14,6 +14,7 @@ const ThemeToggle = () => {
       <button
          onClick={() => dispatch(toggleTheme())}
          className="w-[21px] h-[21px] cursor-pointer relative overflow-hidden ml-12"
+         aria-label="Light / Dark mode switch"
       >
          <AnimatePresence mode="wait">
             {theme === 'light' ? <SunIcon spin={spin} /> : <MoonIcon spin={spin} />}
