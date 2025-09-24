@@ -3,7 +3,6 @@ import Footer from './Footer';
 import Header from './header/Header';
 
 const Layout = () => {
-   // minus Header height, minus Footer height
    return (
       <div className="flex flex-col min-h-screen">
          <Header />

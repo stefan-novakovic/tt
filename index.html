@@ -10,6 +10,29 @@
       <link rel="icon" type="image/svg+xml" href="/favicon.jpg" />
 
       <title>TT</title>
+
+      <!-- Apply the saved theme immediately before CSS loads -->
+      <script>
+         const savedTheme = localStorage.getItem('theme') || 'light';
+         document.documentElement.classList.add(savedTheme);
+      </script>
+
+      <!-- Define theme background and text colors with transitions (prevents flashing) -->
+      <style>
+         html {
+            transition:
+               background-color 300ms,
+               color 300ms;
+         }
+         html.dark {
+            background-color: #0a0a0a;
+            color: #fff;
+         }
+         html.light {
+            background-color: #fff;
+            color: #000;
+         }
+      </style>
    </head>
    <body>
       <div id="root"></div>

@@ -31,16 +31,16 @@ const LoginForm = () => {
    return (
       <form
          onSubmit={handleLogin}
-         className="w-full max-w-md p-8 bg-white rounded-2xl shadow-[0_0_25px_rgba(0,0,0,0.075)] space-y-6"
+         className="w-full max-w-md p-8 text-black dark:text-white rounded-2xl shadow-[0_0_25px_rgba(0,0,0,0.075)] dark:shadow-[0_0_20px_rgba(255,255,255,0.4)] space-y-6"
       >
-         <h2 className="text-3xl font-bold text-center text-black">Login</h2>
+         <h2 className="text-3xl font-bold text-center">Login</h2>
 
          <input
             type="email"
             placeholder="Email"
             value={email}
             onChange={(e) => setEmail(e.target.value)}
-            className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500"
+            className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2"
             required
          />
 
@@ -50,7 +50,7 @@ const LoginForm = () => {
                placeholder="Password"
                value={password}
                onChange={(e) => setPassword(e.target.value)}
-               className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 pr-10"
+               className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 pr-10"
                required
             />
             <button
@@ -64,14 +64,14 @@ const LoginForm = () => {
 
          <button
             type="submit"
-            className="w-full py-3 bg-blue-600 text-white font-semibold rounded-lg shadow-md hover:bg-blue-700 transition"
+            className="w-full py-3 bg-blue-500 text-white font-semibold rounded-lg shadow-md hover:bg-blue-600 transition cursor-pointer"
          >
             Login
          </button>
 
          <p className="text-center text-gray-500">
             Don't have an account?{' '}
-            <Link to="/auth/signup" className="text-blue-600 font-medium hover:underline">
+            <Link to="/auth/signup" className="text-blue-500 font-medium hover:underline">
                Sign Up here
             </Link>
          </p>
@@ -94,16 +94,16 @@ const SignupForm = () => {
    return (
       <form
          onSubmit={handleSignup}
-         className="w-full max-w-md p-8 bg-white rounded-2xl shadow-[0_0_25px_rgba(0,0,0,0.075)] space-y-6"
+         className="w-full max-w-md p-8 text-black dark:text-white rounded-2xl shadow-[0_0_25px_rgba(0,0,0,0.075)] dark:shadow-[0_0_20px_rgba(255,255,255,0.4)] space-y-6"
       >
-         <h2 className="text-3xl font-bold text-center text-black">Create Account</h2>
+         <h2 className="text-3xl font-bold text-center">Create Account</h2>
 
          <input
             type="text"
             placeholder="Full Name"
             value={name}
             onChange={(e) => setName(e.target.value)}
-            className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-green-500"
+            className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2"
             required
          />
 
@@ -112,7 +112,7 @@ const SignupForm = () => {
             placeholder="Email"
             value={email}
             onChange={(e) => setEmail(e.target.value)}
-            className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-green-500"
+            className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2"
             required
          />
 
@@ -122,7 +122,7 @@ const SignupForm = () => {
                placeholder="Password"
                value={password}
                onChange={(e) => setPassword(e.target.value)}
-               className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-green-500 pr-10"
+               className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 pr-10"
                required
             />
             <button
@@ -136,14 +136,14 @@ const SignupForm = () => {
 
          <button
             type="submit"
-            className="w-full py-3 bg-green-600 text-white font-semibold rounded-lg shadow-md hover:bg-green-700 transition"
+            className="w-full py-3 bg-green-700 text-white font-semibold rounded-lg shadow-md hover:bg-green-800 transition cursor-pointer"
          >
             Sign Up
          </button>
 
          <p className="text-center text-gray-500">
             Already have an account?{' '}
-            <Link to="/auth/login" className="text-green-600 font-medium hover:underline">
+            <Link to="/auth/login" className="text-green-700 font-medium hover:underline">
                Login here
             </Link>
          </p>

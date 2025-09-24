@@ -11,10 +11,14 @@ const Header = () => {
       setSidebarOpen(false);
    };
    return (
-      <header className="relative h-16 md:h-20 w-full max-w-[1920px] mx-auto font-medium flex justify-between items-center px-3 md:px-5 xl:px-7">
+      <header className="relative h-16 md:h-18 w-full max-w-[1920px] mx-auto font-medium flex justify-between items-center px-3 md:px-5 xl:px-7 text-black dark:text-white duration-300 transition-colors">
          {/* Logo image */}
          <Link to="/" className="block w-38 p-2 xl:p-4">
-            <img src="/logo-placeholder.png" alt="" className="brightness-0 pl-0 pr-16 xl:pr-9" />
+            <img
+               src="/logo-placeholder.png"
+               alt=""
+               className="brightness-0 dark:brightness-200 pl-0 pr-16 xl:pr-9"
+            />
          </Link>
 
          {/* Desktop navigation */}
