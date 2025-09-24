@@ -22,12 +22,12 @@ const HeroSwiper = () => {
       >
          {swiperSlides.map((slide, idx) => (
             <SwiperSlide key={slide.src}>
-               <div className="relative w-full h-full bg-white">
+               <div className="relative w-full h-full">
                   {/* Low resolution image (placeholder) */}
                   <img
                      src={slide.lowRes}
                      alt=""
-                     className="absolute w-full h-full object-cover brightness-80 select-none"
+                     className="absolute w-full h-full object-cover brightness-80 dark:brightness-[65%] duration-700 transition-[filter] select-none"
                   />
                   {/* High resolution image */}
                   <motion.img
@@ -39,7 +39,7 @@ const HeroSwiper = () => {
                         scale: activeIndex === idx ? 1.035 : 1
                      }}
                      transition={{ opacity: { duration: 1 }, scale: { duration: 8 } }}
-                     className="absolute w-full h-full object-cover brightness-75 select-none"
+                     className="absolute w-full h-full object-cover brightness-75 dark:brightness-[60%] duration-700 transition-[filter] select-none"
                      onLoad={() => setLoaded((prev) => ({ ...prev, [slide.src]: true }))}
                   />
                   {/* Overlay text */}

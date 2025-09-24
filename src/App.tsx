@@ -6,6 +6,7 @@ import Coaches from './pages/Coaches';
 import Clients from './pages/Clients';
 import Drills from './pages/Drills';
 import NotFound from './pages/NotFound';
+
 const App = () => {
    return (
       <Routes>

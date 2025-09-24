@@ -19,7 +19,7 @@ const SidebarMenu = ({
                   animate={{ opacity: 0.2 }}
                   exit={{ opacity: 0 }}
                   transition={{ duration: 0.4 }}
-                  className="fixed inset-0 bg-black z-40 md:hidden"
+                  className="fixed inset-0 bg-neutral-950 z-40 md:hidden"
                   onClick={closeSidebar}
                />
 
@@ -29,7 +29,7 @@ const SidebarMenu = ({
                   animate={{ x: 0 }}
                   exit={{ x: '100%' }}
                   transition={{ duration: 0.5 }}
-                  className="fixed top-0 right-0 z-50 h-screen w-60 bg-white flex flex-col md:hidden drop-shadow-xl sidebar-menu-overflow"
+                  className="fixed top-0 right-0 z-50 h-screen w-60 bg-white dark:bg-neutral-950 flex flex-col md:hidden drop-shadow-xl sidebar-menu-overflow"
                >
                   {/* Close button */}
                   <div>

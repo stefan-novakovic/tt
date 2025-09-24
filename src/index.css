@@ -2,6 +2,7 @@
 @import 'swiper/css';
 @import 'swiper/css/effect-fade';
 @import 'swiper/css/pagination';
+@custom-variant dark (&:where(.dark, .dark *));
 
 @font-face {
    font-family: 'Alexandria';
@@ -45,7 +46,7 @@ body {
 
 @media screen and (min-width: 768px) {
    .swiper {
-      height: calc(100vh - 80px);
+      height: calc(100vh - 72px);
    }
 
    .swiper-pagination span {
@@ -63,7 +64,7 @@ body {
 @media (hover: hover) and (pointer: fine) {
    a:hover,
    a:focus-visible {
-      opacity: 0.7;
+      opacity: 0.8;
    }
 
    a:active {

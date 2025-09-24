@@ -2,6 +2,7 @@ import { useEffect, useState } from 'react';
 import { NavLink } from 'react-router-dom';
 import { motion } from 'framer-motion';
 import { navLinks } from '../../data/data';
+import { useAppSelector } from '../../app/hooks';
 
 const MobileNavigation = ({ closeSidebar }: { closeSidebar: VoidFunction }) => {
    return (
@@ -25,6 +26,7 @@ export function MobileNavigationLink({
    children?: React.ReactNode;
 }) {
    const [mounted, setMounted] = useState<boolean>(false);
+   const theme = useAppSelector((state) => state.theme.mode);
 
    useEffect(() => {
       setMounted(true);
@@ -44,7 +46,7 @@ export function MobileNavigationLink({
                   <motion.span
                      layoutId="activeLinkBg"
                      className="absolute inset-0"
-                     style={{ background: 'black' }}
+                     style={{ background: theme === 'dark' ? 'white' : 'black' }}
                      transition={{ duration: 0.4 }}
                      initial={false} // no animation on first render
                   />
@@ -52,8 +54,8 @@ export function MobileNavigationLink({
                <span
                   className={
                      isActive
-                        ? 'text-white relative z-10 text-shadow-[0px_0px_2px_black]'
-                        : 'text-black relative z-10'
+                        ? 'text-white dark:text-black relative z-10 text-shadow-[2px_1px_1px_black]  dark:text-shadow-[2px_1px_1px_white]'
+                        : 'text-black dark:text-white relative z-10'
                   }
                >
                   {children}
