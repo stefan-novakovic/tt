@@ -33,6 +33,7 @@ const HeroSwiper = () => {
                   <motion.img
                      src={slide.src}
                      alt=""
+                     fetchPriority="high"
                      initial={{ opacity: 0, scale: 1 }}
                      animate={{
                         opacity: loaded[slide.src] ? 1 : 0,

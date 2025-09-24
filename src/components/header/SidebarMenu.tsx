@@ -33,7 +33,11 @@ const SidebarMenu = ({
                >
                   {/* Close button */}
                   <div>
-                     <button className="float-right px-5 pt-[18px] pb-4" onClick={closeSidebar}>
+                     <button
+                        className="float-right px-5 pt-[18px] pb-4"
+                        onClick={closeSidebar}
+                        aria-label="Close hamburger menu"
+                     >
                         <IoMdClose size={30} />
                      </button>
                   </div>

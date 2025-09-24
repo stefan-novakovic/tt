@@ -13,7 +13,7 @@ const Header = () => {
    return (
       <header className="relative h-16 md:h-18 w-full max-w-[1920px] mx-auto font-medium flex justify-between items-center px-3 md:px-5 xl:px-7 text-black dark:text-white duration-300 transition-colors">
          {/* Logo image */}
-         <Link to="/" className="block w-38 p-2 xl:p-4">
+         <Link to="/" className="block w-38 p-2 xl:p-4" aria-label="Return to Home page">
             <img
                src="/logo-placeholder.png"
                alt=""
@@ -31,7 +31,11 @@ const Header = () => {
                <Link to="/auth/signup">Sign Up</Link>
             </div>
             {/* Hamburger button */}
-            <button className="md:hidden" onClick={() => setSidebarOpen((prev) => !prev)}>
+            <button
+               className="md:hidden"
+               onClick={() => setSidebarOpen((prev) => !prev)}
+               aria-label="Hamburger menu"
+            >
                <GiHamburgerMenu size={30} />
             </button>
          </div>

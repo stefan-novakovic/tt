@@ -10,7 +10,7 @@ interface AuthProps {
 export default function Auth({ mode }: AuthProps) {
    return (
       <PageLayout>
-         <div className="flex justify-center items-center min-h-[80vh]">
+         <div className="flex flex-1 justify-center items-center px-4 py-9">
             {mode === 'signup' ? <SignupForm /> : <LoginForm />}
          </div>
       </PageLayout>
@@ -31,26 +31,29 @@ const LoginForm = () => {
    return (
       <form
          onSubmit={handleLogin}
-         className="w-full max-w-md p-8 text-black dark:text-white rounded-2xl shadow-[0_0_25px_rgba(0,0,0,0.075)] dark:shadow-[0_0_20px_rgba(255,255,255,0.4)] space-y-6"
+         className="w-full max-w-md p-5 md:p-8 text-black dark:text-white rounded-2xl shadow-[0_0_15px_rgba(0,0,0,0.1)] dark:shadow-[0_0_15px_rgba(255,255,255,0.4)] space-y-5"
       >
          <h2 className="text-3xl font-bold text-center">Login</h2>
 
          <input
             type="email"
+            name="email"
             placeholder="Email"
+            autoComplete="email"
             value={email}
             onChange={(e) => setEmail(e.target.value)}
-            className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2"
+            className="w-full px-3 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2"
             required
          />
 
          <div className="relative">
             <input
                type={showPassword ? 'text' : 'password'}
+               name="password"
                placeholder="Password"
                value={password}
                onChange={(e) => setPassword(e.target.value)}
-               className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 pr-10"
+               className="w-full px-3 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 pr-10"
                required
             />
             <button
@@ -69,9 +72,12 @@ const LoginForm = () => {
             Login
          </button>
 
-         <p className="text-center text-gray-500">
+         <p className="text-center text-gray-500 tracking-tight">
             Don't have an account?{' '}
-            <Link to="/auth/signup" className="text-blue-500 font-medium hover:underline">
+            <Link
+               to="/auth/signup"
+               className="text-blue-500 font-medium hover:underline text-nowrap"
+            >
                Sign Up here
             </Link>
          </p>
@@ -94,35 +100,40 @@ const SignupForm = () => {
    return (
       <form
          onSubmit={handleSignup}
-         className="w-full max-w-md p-8 text-black dark:text-white rounded-2xl shadow-[0_0_25px_rgba(0,0,0,0.075)] dark:shadow-[0_0_20px_rgba(255,255,255,0.4)] space-y-6"
+         className="w-full max-w-md p-5 md:p-8 text-black dark:text-white rounded-2xl shadow-[0_0_15px_rgba(0,0,0,0.1)] dark:shadow-[0_0_15px_rgba(255,255,255,0.4)] space-y-5"
       >
          <h2 className="text-3xl font-bold text-center">Create Account</h2>
 
          <input
             type="text"
+            name="fullName"
             placeholder="Full Name"
+            autoComplete="name"
             value={name}
             onChange={(e) => setName(e.target.value)}
-            className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2"
+            className="w-full px-3 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2"
             required
          />
 
          <input
             type="email"
+            name="email"
             placeholder="Email"
+            autoComplete="email"
             value={email}
             onChange={(e) => setEmail(e.target.value)}
-            className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2"
+            className="w-full px-3 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2"
             required
          />
 
          <div className="relative">
             <input
                type={showPassword ? 'text' : 'password'}
+               name="password"
                placeholder="Password"
                value={password}
                onChange={(e) => setPassword(e.target.value)}
-               className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 pr-10"
+               className="w-full px-3 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 pr-10"
                required
             />
             <button
@@ -141,9 +152,12 @@ const SignupForm = () => {
             Sign Up
          </button>
 
-         <p className="text-center text-gray-500">
+         <p className="text-center text-gray-500 tracking-tight">
             Already have an account?{' '}
-            <Link to="/auth/login" className="text-green-700 font-medium hover:underline">
+            <Link
+               to="/auth/login"
+               className="text-green-700 font-medium hover:underline text-nowrap"
+            >
                Login here
             </Link>
          </p>
