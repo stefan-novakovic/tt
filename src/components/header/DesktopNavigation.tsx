@@ -18,7 +18,7 @@ function NavigationLink({ to, children }: { to: string; children?: React.ReactNo
       <NavLink
          to={to}
          className={({ isActive }) =>
-            `relative pb-1 after:absolute after:left-0 after:bottom-0 after:h-[2px] after:w-full after:opacity-100 hover:after:opacity-80 after:bg-neutral-950 dark:after:bg-white after:scale-x-0 after:origin-center after:transition-transform after:duration-500 after:ease-in-out hover:after:scale-x-100 ${isActive ? 'after:scale-x-100' : ''}`
+            `relative pb-1 after:absolute after:left-0 after:bottom-0 after:h-[2px] after:w-full after:opacity-100 hover:after:opacity-80 after:bg-black dark:after:bg-white after:scale-x-0 after:origin-center after:transition-transform after:duration-500 after:ease-in-out hover:after:scale-x-100 outline-offset-8 ${isActive ? 'after:scale-x-100' : ''}`
          }
       >
          {children}

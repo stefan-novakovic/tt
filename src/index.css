@@ -20,6 +20,49 @@ body {
    font-family: var(--font-alexandria);
 }
 
+html.dark input:hover,
+html.dark input:focus-visible {
+   outline: 2px solid var(--color-white);
+   outline-offset: -1px;
+}
+
+html.light input:hover,
+html.light input:focus-visible {
+   outline: 2px solid var(--color-black);
+   outline-offset: -1px;
+}
+
+/* Change autocomplete styles in WebKit */
+html.dark input:-webkit-autofill,
+html.dark input:-webkit-autofill:hover,
+html.dark input:-webkit-autofill:focus,
+html.dark textarea:-webkit-autofill,
+html.dark textarea:-webkit-autofill:hover,
+html.dark textarea:-webkit-autofill:focus,
+html.dark select:-webkit-autofill,
+html.dark select:-webkit-autofill:hover,
+html.dark select:-webkit-autofill:focus {
+   border: 1px solid var(--color-white);
+   -webkit-text-fill-color: var(--color-white);
+   -webkit-box-shadow: 0 0 0px 1000px transparent inset;
+   transition: background-color 50000s ease-in-out 0s;
+}
+
+html.light input:-webkit-autofill,
+html.light input:-webkit-autofill:hover,
+html.light input:-webkit-autofill:focus,
+html.light textarea:-webkit-autofill,
+html.light textarea:-webkit-autofill:hover,
+html.light textarea:-webkit-autofill:focus,
+html.light select:-webkit-autofill,
+html.light select:-webkit-autofill:hover,
+html.light select:-webkit-autofill:focus {
+   border: 1px solid var(--color-gray-300);
+   -webkit-text-fill-color: var(--color-black);
+   -webkit-box-shadow: 0 0 0px 1000px transparent inset;
+   transition: background-color 50000s ease-in-out 0s;
+}
+
 .swiper {
    width: 100%;
    height: calc(100vh - 64px);
@@ -34,7 +77,7 @@ body {
 }
 
 .swiper-pagination span {
-   background-color: white;
+   background-color: var(--color-white);
    width: 0.65rem;
    height: 0.65rem;
 }
