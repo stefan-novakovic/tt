@@ -13,7 +13,7 @@ const ThemeToggle = () => {
    return (
       <button
          onClick={() => dispatch(toggleTheme())}
-         className="w-[21px] h-[21px] cursor-pointer relative overflow-hidden ml-12"
+         className="w-[21px] h-[21px] cursor-pointer relative overflow-hidden ml-12 outline-offset-4"
          aria-label="Light / Dark mode switch"
       >
          <AnimatePresence mode="wait">

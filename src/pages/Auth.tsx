@@ -42,7 +42,7 @@ const LoginForm = () => {
             autoComplete="email"
             value={email}
             onChange={(e) => setEmail(e.target.value)}
-            className="w-full px-3 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2"
+            className="w-full px-3 py-3 border border-gray-300 rounded-lg"
             required
          />
 
@@ -53,7 +53,7 @@ const LoginForm = () => {
                placeholder="Password"
                value={password}
                onChange={(e) => setPassword(e.target.value)}
-               className="w-full px-3 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 pr-10"
+               className="w-full px-3 py-3 border border-gray-300 rounded-lg pr-10"
                required
             />
             <button
@@ -111,7 +111,7 @@ const SignupForm = () => {
             autoComplete="name"
             value={name}
             onChange={(e) => setName(e.target.value)}
-            className="w-full px-3 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2"
+            className="w-full px-3 py-3 border border-gray-300 rounded-lg"
             required
          />
 
@@ -122,7 +122,7 @@ const SignupForm = () => {
             autoComplete="email"
             value={email}
             onChange={(e) => setEmail(e.target.value)}
-            className="w-full px-3 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2"
+            className="w-full px-3 py-3 border border-gray-300 rounded-lg"
             required
          />
 
@@ -133,7 +133,7 @@ const SignupForm = () => {
                placeholder="Password"
                value={password}
                onChange={(e) => setPassword(e.target.value)}
-               className="w-full px-3 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 pr-10"
+               className="w-full px-3 py-3 border border-gray-300 rounded-lg"
                required
             />
             <button

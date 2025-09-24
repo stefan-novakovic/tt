@@ -80,7 +80,7 @@ const HeroSwiper = () => {
                                        opacity: { duration: 1, ease: 'easeOut', delay: 0.9 }
                                     }}
                                     whileHover={{ scale: 1, transition: { duration: 0.2 } }}
-                                    className="mt-6 px-7 py-4 bg-transparent border-2 border-white text-white text-2xl font-semibold rounded-full text-shadow-lg drop-shadow-md shadow-lg text-re cursor-pointer select-text no-swipe tracking-wide"
+                                    className="mt-6 px-7 py-4 bg-transparent border-2 border-white text-white text-2xl font-semibold rounded-full text-shadow-lg drop-shadow-md shadow-lg text-re cursor-pointer select-text no-swipe tracking-wide outline-offset-4"
                                  >
                                     {slide.buttonText}
                                  </motion.button>
