@@ -17,7 +17,11 @@ const ThemeToggle = () => {
          aria-label="Light / Dark mode switch"
       >
          <AnimatePresence mode="wait">
-            {theme === 'light' ? <SunIcon spin={spin} /> : <MoonIcon spin={spin} />}
+            {theme === 'light' ? (
+               <SunIcon key="sun" spin={spin} />
+            ) : (
+               <MoonIcon key="moon" spin={spin} />
+            )}
          </AnimatePresence>
       </button>
    );
@@ -26,7 +30,6 @@ const ThemeToggle = () => {
 function SunIcon({ spin }: { spin: number }) {
    return (
       <motion.div
-         key="sun"
          initial={{ rotate: 0, scale: 0 }}
          animate={{ rotate: spin, scale: 1 }}
          exit={{ rotate: spin, scale: 0 }}
@@ -41,7 +44,6 @@ function SunIcon({ spin }: { spin: number }) {
 function MoonIcon({ spin }: { spin: number }) {
    return (
       <motion.div
-         key="moon"
          initial={{ rotate: 0, scale: 0 }}
          animate={{ rotate: spin, scale: 1 }}
          exit={{ rotate: spin, scale: 0 }}
