@@ -20,28 +20,16 @@ body {
    font-weight: 400;
 }
 
-html.dark input:hover,
-html.dark input:focus-visible {
-   outline: 2px solid var(--color-white);
-   outline-offset: -1px;
-}
-
-html.light input:hover,
-html.light input:focus-visible {
-   outline: 2px solid var(--color-black);
-   outline-offset: -1px;
-}
-
 /* Change autocomplete styles in WebKit */
 html.dark input:-webkit-autofill,
 html.dark input:-webkit-autofill:hover,
-html.dark input:-webkit-autofill:focus,
+html.dark input:-webkit-autofill:focus-visible,
 html.dark textarea:-webkit-autofill,
 html.dark textarea:-webkit-autofill:hover,
-html.dark textarea:-webkit-autofill:focus,
+html.dark textarea:-webkit-autofill:focus-visible,
 html.dark select:-webkit-autofill,
 html.dark select:-webkit-autofill:hover,
-html.dark select:-webkit-autofill:focus {
+html.dark select:-webkit-autofill:focus-visible {
    border: 1px solid var(--color-white);
    -webkit-text-fill-color: var(--color-white);
    -webkit-box-shadow: 0 0 0px 1000px transparent inset;
@@ -50,13 +38,13 @@ html.dark select:-webkit-autofill:focus {
 
 html.light input:-webkit-autofill,
 html.light input:-webkit-autofill:hover,
-html.light input:-webkit-autofill:focus,
+html.light input:-webkit-autofill:focus-visible,
 html.light textarea:-webkit-autofill,
 html.light textarea:-webkit-autofill:hover,
-html.light textarea:-webkit-autofill:focus,
+html.light textarea:-webkit-autofill:focus-visible,
 html.light select:-webkit-autofill,
 html.light select:-webkit-autofill:hover,
-html.light select:-webkit-autofill:focus {
+html.light select:-webkit-autofill:focus-visible {
    border: 1px solid var(--color-gray-300);
    -webkit-text-fill-color: var(--color-black);
    -webkit-box-shadow: 0 0 0px 1000px transparent inset;
