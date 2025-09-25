@@ -3,7 +3,7 @@ import { navLinks } from '../../data/data';
 
 const DesktopNavigation = () => {
    return (
-      <nav className="hidden md:flex gap-5 xl:gap-6 2xl:gap-7 text-xl tracking-wider">
+      <nav className="hidden md:flex gap-5 xl:gap-6 2xl:gap-7 text-xl tracking-wider font-medium">
          {navLinks.map(({ to, label }: { to: string; label: string }) => (
             <NavigationLink key={to} to={to}>
                {label}

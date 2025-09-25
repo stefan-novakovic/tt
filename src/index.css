@@ -6,8 +6,7 @@
 
 @font-face {
    font-family: 'Alexandria';
-   src: url('./assets/fonts/Alexandria-Regular.ttf') format('truetype');
-   font-weight: 400;
+   src: url('/assets/fonts/Alexandria-Variable_Font_Weight.ttf') format('truetype');
    font-style: normal;
    font-display: swap;
 }
@@ -18,6 +17,7 @@
 
 body {
    font-family: var(--font-alexandria);
+   font-weight: 400;
 }
 
 html.dark input:hover,

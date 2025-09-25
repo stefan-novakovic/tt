@@ -30,7 +30,7 @@ const Header = () => {
          {/* Desktop navigation */}
          <DesktopNavigation />
 
-         <div className="w-auto md:w-38 flex justify-end p-2 xl:p-3 tracking-tight">
+         <div className="w-auto md:w-38 flex justify-end p-2 xl:p-3 tracking-tight font-normal">
             {/* Login/Sign Up links */}
             <div className="hidden md:flex">
                <Link to="/auth/login">Login</Link>&nbsp;/&nbsp;

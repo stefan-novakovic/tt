@@ -6,7 +6,7 @@ import { useAppSelector } from '../../app/hooks';
 
 const MobileNavigation = ({ closeSidebar }: { closeSidebar: VoidFunction }) => {
    return (
-      <nav className="flex flex-col text-xl tracking-wider pb-10">
+      <nav className="flex flex-col text-xl tracking-wider font-medium pb-10">
          {navLinks.map(({ to, label }: { to: string; label: string }) => (
             <MobileNavigationLink key={to} to={to} closeSidebar={closeSidebar}>
                {label}
@@ -19,10 +19,12 @@ const MobileNavigation = ({ closeSidebar }: { closeSidebar: VoidFunction }) => {
 export function MobileNavigationLink({
    to,
    closeSidebar,
+   translate = true,
    children
 }: {
    to: string;
    closeSidebar: VoidFunction;
+   translate?: boolean;
    children?: React.ReactNode;
 }) {
    const [mounted, setMounted] = useState<boolean>(false);
@@ -54,7 +56,7 @@ export function MobileNavigationLink({
                <span
                   className={
                      isActive
-                        ? 'text-white dark:text-black relative z-10 text-shadow-[2px_1px_1px_black]  dark:text-shadow-[2px_1px_1px_white]'
+                        ? `block text-white dark:text-black relative z-10 text-shadow-[1px_1px_2px_black]  dark:text-shadow-[1px_1px_2px_white] transition-all duration-300 ${translate && 'translate-x-1.5'}`
                         : 'text-black dark:text-white relative z-10'
                   }
                >
