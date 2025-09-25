@@ -45,11 +45,19 @@ const SidebarMenu = ({
                   {/* Mobile navigation & Login/Sign Up links  */}
                   <div className="flex flex-1 flex-col justify-between">
                      <MobileNavigation closeSidebar={closeSidebar} />
-                     <div className="flex px-4 py-6 justify-center tracking-wide">
-                        <MobileNavigationLink to="/auth/login" closeSidebar={closeSidebar}>
+                     <div className="flex px-4 py-6 justify-center tracking-wide font-normal">
+                        <MobileNavigationLink
+                           to="/auth/login"
+                           closeSidebar={closeSidebar}
+                           translate={false}
+                        >
                            Login
                         </MobileNavigationLink>
-                        <MobileNavigationLink to="/auth/signup" closeSidebar={closeSidebar}>
+                        <MobileNavigationLink
+                           to="/auth/signup"
+                           closeSidebar={closeSidebar}
+                           translate={false}
+                        >
                            Sign Up
                         </MobileNavigationLink>
                      </div>
